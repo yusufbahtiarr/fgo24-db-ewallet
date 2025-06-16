@@ -5,10 +5,10 @@ This project, presents an Entity-Relationship Diagram (ERD) for an E-Wallet syst
 ```mermaid
 erDiagram
     direction LR
-    customer ||--o{ transaction : performss
-    customer ||--o{ transaction : involves
-    customer ||--o{ topup : performss
-    customer ||--o{ balance : has
+    customer ||--o{ transaction : performs
+    customer ||--o{ transaction : receives
+    customer ||--o{ topup : performs
+    customer ||--|| balance : has
     topup ||--o{ balance : updates
     transaction }o--|| payment_method : uses
     transaction ||--o{ balance : updates
